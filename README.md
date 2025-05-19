@@ -49,7 +49,7 @@ jupyter notebook
 
 ## Dataset
 
-The dataset used in this project is \[resume_dataset.csv]. Make sure to place the dataset in the appropriate directory or update the path in the notebook if needed.
+The dataset used in this project is \[resume_dataset.csv]. 
 
 ## Results
 
