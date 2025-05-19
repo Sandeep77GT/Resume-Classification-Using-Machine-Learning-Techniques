@@ -55,9 +55,7 @@ The dataset used in this project is \[resume_dataset.csv].
 
 The model achieved an accuracy of *\[X%]* on the validation set and *\[Y%]* on the test set. Below are some performance metrics:
 
-* Accuracy: ...
-* Loss: ...
-* Confusion Matrix / Plots: (See notebook for details)
+* Accuracy: The model was 87% accurate on the training data and 79% on the testing data
 
 ## License
 
