@@ -1,4 +1,4 @@
-# Resume Classification Using Machine Learning 
+# Resume Classification Using Machine Learning Techniques 
 
 This repository contains a deep learning project implemented in a Jupyter Notebook. The project involves building, training, and evaluating a neural network model using Python and deep learning libraries such as TensorFlow or PyTorch.
 
