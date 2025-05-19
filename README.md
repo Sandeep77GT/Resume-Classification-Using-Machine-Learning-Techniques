@@ -1,7 +1,3 @@
-Here is a sample README.md file for your deep learning project based on the uploaded notebook DEEP_LEARNING_PROJECT (1).ipynb. You can modify details like project name, dataset, or results as needed:
-
----
-
 # Deep Learning Project
 
 This repository contains a deep learning project implemented in a Jupyter Notebook. The project involves building, training, and evaluating a neural network model using Python and deep learning libraries such as TensorFlow or PyTorch.
