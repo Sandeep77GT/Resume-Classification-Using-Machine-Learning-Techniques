@@ -62,7 +62,3 @@ The model achieved an accuracy of *\[X%]* on the validation set and *\[Y%]* on t
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
----
-
-If you’d like, I can also generate a requirements.txt file based on the libraries used in the notebook. Let me know.
