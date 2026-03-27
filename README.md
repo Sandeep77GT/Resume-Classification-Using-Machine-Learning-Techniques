@@ -1,62 +1,174 @@
-# Resume Classification Using Machine Learning Techniques 
+# Resume Classification using Machine Learning and NLP
 
-This repository contains a deep learning project implemented in a Jupyter Notebook. The project involves building, training, and evaluating a neural network model using Python and deep learning libraries such as TensorFlow or PyTorch.
+## Overview
+This project implements a machine learning-based resume classification system that automatically categorizes resumes into predefined job roles using Natural Language Processing (NLP) techniques.
 
-## Project Overview
+The system processes raw resume text, performs text cleaning and feature extraction using TF-IDF, and applies a One-vs-Rest K-Nearest Neighbors (KNN) classifier for multi-class classification.
 
-This project focuses on solving a \[classification/regression] problem using a deep neural network. It covers:
+---
 
-* Data loading and preprocessing
-* Model design and compilation
-* Model training and validation
-* Evaluation on test data
-* Visualization of results
+## Problem Statement
+Recruitment processes often involve manual screening of resumes, which is time-consuming and inefficient. This project aims to:
 
-## Requirements
+- Automate resume classification
+- Reduce manual effort in candidate screening
+- Improve recruitment efficiency using machine learning
 
-To run this project, install the following dependencies:
+---
 
-* Python 3.x
-* NumPy
-* Pandas
-* Matplotlib
-* TensorFlow or PyTorch (depending on the code)
-* scikit-learn
-* Jupyter Notebook
+## Dataset Description
 
-You can install the required packages using:
+The dataset consists of resumes labeled across multiple job categories.
 
-bash
-pip install -r requirements.txt
+### Key Features:
+- `Resume`: Raw text of resumes
+- `Category`: Job category label
+- `cleaned_resume`: Preprocessed text used for modeling
 
+### Categories Include:
+- Data Science
+- HR
+- Java Developer
+- DevOps Engineer
+- Business Analyst
+- Mechanical Engineer
+- Web Designing
+- And more (25+ categories)
 
-## Usage
+---
 
-1. Clone the repository or download the notebook file.
+## Exploratory Data Analysis
 
-bash
-git clone https://github.com/yourusername/deep-learning-project.git
-cd deep-learning-project
+- Distribution of resume categories visualized using count plots
+- Pie chart representation of category proportions
+- Word frequency analysis performed using NLTK
+- Word cloud generated to identify dominant terms in resumes
 
+---
 
-2. Launch Jupyter Notebook:
+## Methodology
 
-bash
-jupyter notebook
+### 1. Data Preprocessing
+- Removal of URLs, mentions, hashtags, and special characters
+- Conversion to lowercase
+- Removal of non-ASCII characters
+- Tokenization and stopword removal using NLTK
 
+---
 
-3. Open DEEP_LEARNING_PROJECT (1).ipynb and run the cells sequentially.
+### 2. Feature Extraction
+- TF-IDF Vectorization applied
+- Maximum features limited to 1500
+- English stopwords removed
 
-## Dataset
+---
 
-The dataset used in this project is \[resume_dataset.csv]. 
+### 3. Label Encoding
+- Categorical labels converted into numerical format using LabelEncoder
+
+---
+
+### 4. Model Training
+
+- Train-test split: 80/20
+- Classifier: OneVsRestClassifier with K-Nearest Neighbors
+
+---
+
+## Model Details
+
+- Algorithm: K-Nearest Neighbors (KNN)
+- Strategy: One-vs-Rest for multi-class classification
+- Feature Representation: TF-IDF
+- Feature Size: 1500
+
+---
 
 ## Results
 
-The model achieved an accuracy of *\[X%]* on the validation set and *\[Y%]* on the test set. Below are some performance metrics:
+### Model Performance
 
-* Accuracy: The model was 87% accurate on the training data and 79% on the testing data
+- Training Accuracy: 0.87
+- Test Accuracy: 0.79
+
+### Evaluation Metrics
+
+- Precision, Recall, and F1-score calculated for each class
+- Weighted F1-score indicates good overall performance
+- Some classes show lower recall due to class imbalance
+
+---
+
+## Key Insights
+
+- TF-IDF effectively captures important resume keywords
+- KNN performs reasonably well for multi-class text classification
+- Performance varies across categories due to imbalance and limited samples
+- Common resume terms include "experience", "project", "management", and "data"
+
+---
+
+## Limitations
+
+- Dataset imbalance across categories
+- KNN is sensitive to feature space dimensionality
+- No hyperparameter tuning performed
+- Limited dataset size affects generalization
+
+---
+
+## Future Improvements
+
+- Apply advanced models such as:
+  - Logistic Regression
+  - Support Vector Machines
+  - Transformer-based models (BERT)
+
+- Perform hyperparameter tuning
+- Use larger and more balanced datasets
+- Implement dimensionality reduction (PCA, LSA)
+- Deploy as a web application
+
+---
+
+## Project Structure
+├── resume_dataset.csv
+├── resume_classifier.py
+├── README.md
+
+---
+
+## Installation
+
+### 1. Clone the Repository
+git clone https://github.com/your-username/resume-classification.git
+cd resume-classification
+
+### 2. Install Dependencies
+pip install -r requirements.txt
+
+---
+
+## Running the Project
+
+python resume_classifier.py
+
+---
+
+## Conclusion
+
+This project demonstrates how machine learning and NLP techniques can be applied to automate resume classification. The approach provides a scalable solution for recruitment systems, though further improvements in model selection and dataset quality are necessary for production-level deployment.
+
+---
+
+## Author
+
+Sandeep S L  
+MSc Data Analytics (Computational Science)  
+Digital University of Kerala  
+
+---
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is open-source and available under the MIT License.
